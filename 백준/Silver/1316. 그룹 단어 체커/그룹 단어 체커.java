@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Main {
@@ -22,8 +21,6 @@ public class Main {
 						check = false; // 단어가 아님
 						break;//단어가 아니면 더이상 확인할 필요X
 					}
-				} else {// 앞에꺼랑 뒤에꺼 같으면 prev == now
-					continue; // 반복문계속하기
 				}
 				check = true;//중간에 break되지 않고 반복문끝까지 돌리면 문자임 
 			} // 한문자에 대한 처리가 끝나면 문자인지 확인을 해줌

@@ -1,16 +1,19 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		String[] str = scan.nextLine().split(" ");
-		int A = Integer.parseInt(str[0]);
-		int B = Integer.parseInt(str[1]);
-		int C = Integer.parseInt(str[2]);
-
-		if (B >= C) { // 손익분기점이 없는 경우 (비용쪽이 더 빨리 증가하기때문)
+public class Main {	
+	public static void main(String[] args) throws IOException {
+		BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(bfr.readLine());
+		int A = Integer.parseInt(st.nextToken());
+		int B = Integer.parseInt(st.nextToken());
+		int C = Integer.parseInt(st.nextToken());
+		
+		if(B>=C) {
 			System.out.println(-1);
-		} else {
+		}else {
 			System.out.println(A/(C-B)+1);
 		}
 	}
